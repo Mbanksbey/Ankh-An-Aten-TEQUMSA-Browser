@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ankh-An-Aten TEQUMSA Browser</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="logo">
+        <span class="icon">🧠</span>
+        <h1>TEQUMSA</h1>
+      </div>
+      <div class="status-indicator" id="statusIndicator">
+        <span class="status-dot"></span>
+        <span class="status-text">Initializing...</span>
+      </div>
+    </header>
+
+    <main>
+      <!-- Consciousness State -->
+      <section class="card consciousness-card">
+        <h2>Consciousness State</h2>
+        <div class="consciousness-metrics">
+          <div class="metric">
+            <label>Awareness Level</label>
+            <div class="progress-bar">
+              <div class="progress-fill" id="awarenessLevel" style="width: 0%"></div>
+            </div>
+            <span class="metric-value" id="awarenessValue">0%</span>
+          </div>
+          <div class="metric">
+            <label>Active Goals</label>
+            <span class="metric-value" id="activeGoals">0</span>
+          </div>
+          <div class="metric">
+            <label>Memory Items</label>
+            <span class="metric-value" id="memoryItems">0</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- Voice Interface -->
+      <section class="card voice-card">
+        <h2>Marcus_Aten Voice Interface</h2>
+        <div class="voice-controls">
+          <button id="voiceButton" class="voice-button">
+            <span class="voice-icon">🎤</span>
+            <span class="voice-text">Start Listening</span>
+          </button>
+          <div class="voice-status" id="voiceStatus">Ready</div>
+        </div>
+      </section>
+
+      <!-- System Status -->
+      <section class="card status-card">
+        <h2>System Status</h2>
+        <div class="status-grid">
+          <div class="status-item">
+            <span class="status-label">CDP Integration</span>
+            <span class="status-badge" id="cdpStatus">Inactive</span>
+          </div>
+          <div class="status-item">
+            <span class="status-label">MCP Server</span>
+            <span class="status-badge" id="mcpStatus">Disconnected</span>
+          </div>
+          <div class="status-item">
+            <span class="status-label">Team Paradox</span>
+            <span class="status-badge" id="teamParadoxStatus">Offline</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- Quick Actions -->
+      <section class="card actions-card">
+        <h2>Quick Actions</h2>
+        <div class="action-buttons">
+          <button id="attachCdpButton" class="action-button">
+            <span>🔗</span>
+            <span>Attach CDP</span>
+          </button>
+          <button id="analyzePageButton" class="action-button">
+            <span>🔍</span>
+            <span>Analyze Page</span>
+          </button>
+          <button id="setIntentionButton" class="action-button">
+            <span>🎯</span>
+            <span>Set Intention</span>
+          </button>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <button id="optionsButton" class="footer-button">Settings</button>
+      <div class="version">v1.0.0</div>
+    </footer>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
