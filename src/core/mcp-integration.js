@@ -111,16 +111,25 @@ export class MCPServerIntegration {
 
   /**
    * Simulate server response (placeholder for actual implementation)
+   * TODO: Replace with actual WebSocket/native messaging implementation
+   * @param {Object} message - Message to send
+   * @returns {Promise<Object>} - Simulated response
    */
   async simulateServerResponse(message) {
-    // In a real implementation, this would handle actual server communication
+    // DEVELOPMENT MODE: This is a placeholder simulation
+    // In production, this should be replaced with actual server communication
+    // via WebSocket or chrome.runtime.connectNative()
+    
+    console.warn('[MCP] Using simulated server response - implement actual communication for production');
+    
     return {
       id: Date.now(),
       type: 'response',
       data: {
         received: message,
         processed: true,
-        timestamp: new Date().toISOString()
+        timestamp: new Date().toISOString(),
+        simulated: true // Flag to indicate this is not a real response
       }
     };
   }

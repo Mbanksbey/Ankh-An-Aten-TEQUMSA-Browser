@@ -287,6 +287,9 @@
     };
   }
 
+  // Constants
+  const MUTATION_THRESHOLD = 10; // Minimum mutations to report as significant change
+
   /**
    * Observe page changes
    */
@@ -294,13 +297,13 @@
     // Observe DOM mutations
     const observer = new MutationObserver((mutations) => {
       // Notify background of significant changes
-      if (mutations.length > 10) {
+      if (mutations.length > MUTATION_THRESHOLD) {
         chrome.runtime.sendMessage({
           type: 'PAGE_CHANGED',
           url: window.location.href,
           mutations: mutations.length
         }).catch(() => {
-          // Ignore errors
+          // Ignore errors (background may not be ready)
         });
       }
     });

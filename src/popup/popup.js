@@ -204,15 +204,17 @@ async function analyzePage() {
  * Set intention
  */
 async function setIntention() {
-  const intention = prompt('Enter intention (e.g., "Navigate to example.com"):');
+  // TODO: Implement proper modal dialog for intention input
+  // For now, using prompt() as a basic implementation
+  const intention = prompt('Enter intention (e.g., "Navigate to example.com"):\n\nNote: This will be replaced with a proper modal in future updates.');
   
-  if (intention) {
+  if (intention && intention.trim()) {
     try {
       const response = await chrome.runtime.sendMessage({
         type: 'EXECUTE_ACTION',
         action: {
           type: 'consciousness',
-          text: intention
+          text: intention.trim()
         }
       });
       

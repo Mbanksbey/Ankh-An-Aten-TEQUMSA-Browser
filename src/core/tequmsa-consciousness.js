@@ -76,9 +76,12 @@ export class TEQUMSAConsciousness {
     // Update memory
     this.updateMemory();
     
-    // Save state periodically
-    if (Math.random() < 0.1) {
+    // Save state periodically (every 10 cycles, approximately every 10 seconds)
+    if (!this.cycleCount) this.cycleCount = 0;
+    this.cycleCount++;
+    if (this.cycleCount >= 10) {
       await this.saveState();
+      this.cycleCount = 0;
     }
   }
 
