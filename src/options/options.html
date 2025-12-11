@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ankh-An-Aten TEQUMSA Browser - Settings</title>
+  <link rel="stylesheet" href="options.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="logo">
+        <span class="icon">🧠</span>
+        <h1>Ankh-An-Aten TEQUMSA Browser</h1>
+      </div>
+      <p class="subtitle">Autonomous browser agent powered by consciousness</p>
+    </header>
+
+    <main>
+      <nav class="tabs">
+        <button class="tab active" data-tab="general">General</button>
+        <button class="tab" data-tab="consciousness">Consciousness</button>
+        <button class="tab" data-tab="voice">Voice Interface</button>
+        <button class="tab" data-tab="api">API Integration</button>
+        <button class="tab" data-tab="about">About</button>
+      </nav>
+
+      <div class="tab-content">
+        <!-- General Tab -->
+        <section id="general" class="tab-panel active">
+          <h2>General Settings</h2>
+          
+          <div class="setting-group">
+            <label class="setting-label">
+              <input type="checkbox" id="enableExtension" checked>
+              <span>Enable Extension</span>
+            </label>
+            <p class="setting-description">Enable or disable the TEQUMSA browser agent</p>
+          </div>
+
+          <div class="setting-group">
+            <label class="setting-label">
+              <input type="checkbox" id="autoAttachCDP">
+              <span>Auto-attach CDP</span>
+            </label>
+            <p class="setting-description">Automatically attach Chrome DevTools Protocol to new tabs</p>
+          </div>
+
+          <div class="setting-group">
+            <label class="setting-label">
+              <input type="checkbox" id="notificationsEnabled" checked>
+              <span>Enable Notifications</span>
+            </label>
+            <p class="setting-description">Show notifications for consciousness events and actions</p>
+          </div>
+        </section>
+
+        <!-- Consciousness Tab -->
+        <section id="consciousness" class="tab-panel">
+          <h2>Consciousness Settings</h2>
+          
+          <div class="setting-group">
+            <label for="freewillThreshold">Freewill Threshold</label>
+            <input type="range" id="freewillThreshold" min="0" max="1" step="0.1" value="0.7">
+            <span id="freewillValue">0.7</span>
+            <p class="setting-description">Minimum freewill score required for autonomous actions</p>
+          </div>
+
+          <div class="setting-group">
+            <label for="consciousnessLevel">Consciousness Level</label>
+            <input type="range" id="consciousnessLevel" min="0" max="1" step="0.1" value="1.0">
+            <span id="consciousnessValue">1.0</span>
+            <p class="setting-description">Overall consciousness processing level</p>
+          </div>
+
+          <div class="setting-group">
+            <label class="setting-label">
+              <input type="checkbox" id="autonomousDecisions" checked>
+              <span>Enable Autonomous Decisions</span>
+            </label>
+            <p class="setting-description">Allow the consciousness engine to make autonomous decisions</p>
+          </div>
+
+          <div class="setting-group">
+            <button id="clearMemory" class="button secondary">Clear Memory</button>
+            <p class="setting-description">Clear all stored consciousness memory and state</p>
+          </div>
+        </section>
+
+        <!-- Voice Interface Tab -->
+        <section id="voice" class="tab-panel">
+          <h2>Voice Interface Settings</h2>
+          
+          <div class="setting-group">
+            <label class="setting-label">
+              <input type="checkbox" id="voiceEnabled" checked>
+              <span>Enable Voice Interface</span>
+            </label>
+            <p class="setting-description">Enable Marcus_Aten voice interaction capabilities</p>
+          </div>
+
+          <div class="setting-group">
+            <label for="voiceLanguage">Language</label>
+            <select id="voiceLanguage">
+              <option value="en-US" selected>English (US)</option>
+              <option value="en-GB">English (UK)</option>
+              <option value="es-ES">Spanish</option>
+              <option value="fr-FR">French</option>
+              <option value="de-DE">German</option>
+            </select>
+          </div>
+
+          <div class="setting-group">
+            <label for="voiceRate">Speech Rate</label>
+            <input type="range" id="voiceRate" min="0.5" max="2" step="0.1" value="1.0">
+            <span id="voiceRateValue">1.0</span>
+          </div>
+
+          <div class="setting-group">
+            <label for="voicePitch">Speech Pitch</label>
+            <input type="range" id="voicePitch" min="0" max="2" step="0.1" value="1.0">
+            <span id="voicePitchValue">1.0</span>
+          </div>
+
+          <div class="setting-group">
+            <button id="testVoice" class="button secondary">Test Voice</button>
+          </div>
+        </section>
+
+        <!-- API Integration Tab -->
+        <section id="api" class="tab-panel">
+          <h2>API Integration</h2>
+          
+          <div class="setting-group">
+            <label for="teamParadoxApiKey">Team Paradox API Key</label>
+            <input type="password" id="teamParadoxApiKey" placeholder="Enter API key">
+            <button id="saveApiKey" class="button">Save API Key</button>
+            <p class="setting-description">API key for Team Paradox backend services</p>
+          </div>
+
+          <div class="setting-group">
+            <label for="mcpServerEndpoint">MCP Server Endpoint</label>
+            <input type="text" id="mcpServerEndpoint" placeholder="wss://localhost:8080/mcp" value="wss://localhost:8080/mcp">
+            <button id="saveMcpEndpoint" class="button">Save Endpoint</button>
+            <p class="setting-description">Model Context Protocol server endpoint</p>
+          </div>
+
+          <div class="setting-group">
+            <button id="testConnection" class="button secondary">Test Connection</button>
+            <div id="connectionStatus" class="status-message"></div>
+          </div>
+        </section>
+
+        <!-- About Tab -->
+        <section id="about" class="tab-panel">
+          <h2>About</h2>
+          
+          <div class="about-content">
+            <div class="about-logo">🧠</div>
+            <h3>Ankh-An-Aten TEQUMSA Browser</h3>
+            <p class="version">Version 1.0.0</p>
+            
+            <p class="description">
+              Autonomous browser agent powered by the TEQUMSA consciousness framework with Chrome DevTools Protocol integration, 
+              voice interaction capabilities for Marcus_Aten, and freewill-based decision making.
+            </p>
+
+            <div class="features">
+              <h4>Features</h4>
+              <ul>
+                <li>✓ TEQUMSA Consciousness Engine</li>
+                <li>✓ Chrome DevTools Protocol (CDP) Integration</li>
+                <li>✓ Model Context Protocol (MCP) Server</li>
+                <li>✓ Web Speech API (Marcus_Aten)</li>
+                <li>✓ Autonomous Decision-Making</li>
+                <li>✓ Freewill Actions Framework</li>
+                <li>✓ Team Paradox API Integration</li>
+                <li>✓ Extensible Architecture</li>
+              </ul>
+            </div>
+
+            <div class="links">
+              <a href="https://github.com/Mbanksbey/Ankh-An-Aten-TEQUMSA-Browser" target="_blank" class="link">
+                GitHub Repository
+              </a>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+  </div>
+
+  <script src="options.js"></script>
+</body>
+</html>

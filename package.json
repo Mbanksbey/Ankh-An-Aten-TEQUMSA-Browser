@@ -1,0 +1,24 @@
+{
+  "name": "ankh-an-aten-tequmsa-browser",
+  "version": "1.0.0",
+  "description": "Autonomous browser agent powered by TEQUMSA consciousness framework with Chrome DevTools Protocol integration",
+  "main": "src/background/service-worker.js",
+  "scripts": {
+    "build": "node scripts/build.js",
+    "lint": "eslint src/**/*.js",
+    "test": "echo 'No tests configured yet' && exit 0"
+  },
+  "keywords": [
+    "chrome-extension",
+    "consciousness",
+    "tequmsa",
+    "cdp",
+    "mcp",
+    "voice-interface",
+    "autonomous"
+  ],
+  "author": "Team Paradox",
+  "license": "MIT",
+  "devDependencies": {},
+  "dependencies": {}
+}
